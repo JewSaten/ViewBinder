@@ -1,0 +1,16 @@
+plugins {
+    id 'java-library'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+dependencies {
+    implementation project(path: ':bindview-annotations')
+    implementation 'com.squareup:javapoet:1.10.0'
+    implementation 'com.google.auto:auto-common:0.10'
+    compileOnly 'com.google.auto.service:auto-service:1.0-rc4'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc4'
+}
